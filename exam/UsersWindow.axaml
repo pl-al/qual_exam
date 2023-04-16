@@ -1,0 +1,19 @@
+<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:vm="clr-namespace:exam.Models"
+        mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
+        x:Class="exam.UsersWindow"
+        Title="Пользователи">
+    <Grid>
+        <DataGrid x:Name="UsersDataGrid" IsReadOnly="True" Items="Model">
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="Фамилия" Binding="{Binding Lastname}"/>
+                <DataGridTextColumn Header="Имя" Binding="{Binding Firstname}"/>
+                <DataGridTextColumn Header="Логин" Binding="{Binding Loginuser}"/>
+                <DataGridTextColumn Header="Страна" Binding="{Binding IdcountryNavigation.Country1}"/>
+            </DataGrid.Columns>
+        </DataGrid>
+    </Grid>
+</Window>
